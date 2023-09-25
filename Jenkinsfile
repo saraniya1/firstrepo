@@ -10,7 +10,7 @@ git branch: 'master', credentialsId: 'GIT_REPO', url: 'https://github.com/sarani
     stage('SonarQube analysis') {
         steps {
             withSonarQubeEnv('sonarqube-9.9') {
-                sh "${env.SONAR_SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=symphony-dev -Dsonar.sources=/var/lib/jenkins/workspace/SQ-Pipeline-Testing"
+                sh "${env.SONAR_SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=symphony-dev -Dsonar.sources=/var/lib/jenkins/workspace/SQ-Git-Pipeline"
             }
         }
     }
